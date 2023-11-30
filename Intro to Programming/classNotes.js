@@ -200,7 +200,7 @@ function abc(){
 
 x =abc();
 console.log(x)
-*/
+*
 
 function abc(number){
     var sum = 0;
@@ -213,6 +213,35 @@ function abc(number){
 
 output = abc(2);
 console.log(output);
+*
+
+//algo app level 12 activity 19 answer of 13 but says is wrong  but matches the solution
+//algo app level 12 activity 20 answer of 29 but says is wrong  but matches the solution
+function abc(number){
+    var sum = 0;
+    for(var i=0; i<number;i++){
+        sum = sum + i;
+    }
+    console.log(sum);
+    return sum +10;
+}
+
+output = abc(2) +abc(3);
+console.log(output);
+*/
+
+function looping(x,y){
+    for(var i=0;i<x; i++);{
+    for (var j=0; j<y; j++);{}
+    console.log(i*j);
+            }
+    }
+    return x*y;
+
+z = looping(2,3);
+console.log(z);
+
+
 
 
 //vs git and  github plus bash notes
