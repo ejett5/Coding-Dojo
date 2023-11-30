@@ -221,5 +221,7 @@ git = version control system, locally done on the local drive
 git -v to check version 
 git bash terminal is Linux based and usese same commands for all systems
 git works in snapshots when a file is saved = only worries about what is new
+fetch is for pulling from github and is especially useful in collaborative work; commits are done in two stages with the push followeed by commit.
+new files not uploaded are indicated by U; 
 
 */
