@@ -228,8 +228,8 @@ function abc(number){
 
 output = abc(2) +abc(3);
 console.log(output);
-*/
-
+*
+//code is busted
 function looping(x,y){
     for(var i=0;i<x; i++);{
     for (var j=0; j<y; j++);{}
@@ -240,7 +240,7 @@ function looping(x,y){
 
 z = looping(2,3);
 console.log(z);
-
+*/
 
 
 
