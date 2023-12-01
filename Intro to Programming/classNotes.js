@@ -213,7 +213,7 @@ function abc(number){
 
 output = abc(2);
 console.log(output);
-*
+*/
 
 //algo app level 12 activity 19 answer of 13 but says is wrong  but matches the solution
 //algo app level 12 activity 20 answer of 29 but says is wrong  but matches the solution
@@ -228,7 +228,7 @@ function abc(number){
 
 output = abc(2) +abc(3);
 console.log(output);
-*
+/*
 //code is busted
 function looping(x,y){
     for(var i=0;i<x; i++);{
