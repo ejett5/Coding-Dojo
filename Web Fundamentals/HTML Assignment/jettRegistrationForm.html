@@ -10,19 +10,19 @@
 <body>
     <!--making basic list to take in info-->
     <form action="/Registration_form.html">
-        <label for="fName">First Name:</label>
+        <label for="fName">First Name:*</label>
         <input type="text" id="fName" name="fName">
         <br><br>
-        <label for="lastName">Last Name:</label>
+        <label for="lastName">Last Name:*</label>
         <input type="text" id="lastName" name="lastName">
         <br><br>
-        <label for="email">email:</label>
+        <label for="email">email:*</label>
         <input type="text" id="email" name="email">
         <br><br>
-        <label for="password">password:</label>
+        <label for="password">password:*</label>
         <input type="password" id="password" name="password">
         <br><br>
-        <label for="confirmPass">Confirm Password:</label>
+        <label for="confirmPass">Confirm Password:*</label>
         <input type="password" id="confirmPass" name="confirmPass">
         <br><br>
         <label for="bDay">Birthday:</label>
@@ -41,33 +41,36 @@
         <label for="neutral">Prefer not to say</label>
         <br><br>
 
-    </form>
 
-    <!--text input area for allowing user input -->
-    <label for="personalStory">A short description about myself:</label>
-    <input type="texarea" id="personalStory" name="personalStory">
-    <br><br>
 
-    <!--available languages to choose from-->
-    <form action="/Registration_form.html">
-        <label for ="favLanguage">My Favorite Language is: </label>
+        <!--text input area for allowing user input -->
+        <label for="personalStory">A short description about myself:</label>
+        <input type="texarea" rows="10" cols="4">
+        <br><br>
 
-    
-    <select name = "favLanguage">
+        <!--available languages to choose from-->
+        <form action="/Registration_form.html">
+            <label for="favLanguage">My Favorite Language is: </label>
+
+
+            <select name="favLanguage">
+
+                <option value="favLanguage"></option>
+                <option value="favLanguage">Javascipt</option>
+                <option value="favLanguage">Python</option>
+                <option value="favLanguage">Kobol</option>
+                <option value="favLanguage">C#</option>
+
+            </select>
+            <br><br>
+            <input type="checkbox" id = "emailList" name="emailList" value="emailList">
+            <label for="emailList">Yes, I would like to receive email updates!</label>
+
+            <br><br>
+            <input type="submit" value="Submit">
         
-            <option value="favLanguage"></option>
-            <option value="favLanguage">Javascipt</option>
-            <option value="favLanguage">Python</option>
-            <option value="favLanguage">Kobol</option>
-            <option value="favLanguage">C#</option>
-
-    </select>
-
-</form>
-        
-
-
-    
+        </form>
+        <p>* indicates required fields</p>
 
 
 </body>
