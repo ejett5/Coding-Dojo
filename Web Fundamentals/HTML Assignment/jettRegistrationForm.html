@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <form action="">
+    <!--making basic list to take in info-->
+    <form action="/Registration_form.html">
         <label for="fName">First Name:</label>
         <input type="text" id="fName" name="fName">
         <br><br>
@@ -27,6 +28,8 @@
         <label for="bDay">Birthday:</label>
         <input type="date" id="bDay" name="bDay">
         <br><br>
+
+        <!--Checkbox for selecting Gender-->
         <p>Gender Identity:</p>
         <input type="radio" id="male" name="male">
         <label for="male">Male</label>
@@ -36,16 +39,22 @@
 
         <input type="radio" id="neutral" name="neutral">
         <label for="neutral">Prefer not to say</label>
+        <br><br>
 
     </form>
 
+    <!--text input area for allowing user input -->
     <label for="personalStory">A short description about myself:</label>
     <input type="texarea" id="personalStory" name="personalStory">
     <br><br>
 
-    <select name = "favLanguage">
+    <!--available languages to choose from-->
+    <form action="/Registration_form.html">
         <label for ="favLanguage">My Favorite Language is: </label>
 
+    
+    <select name = "favLanguage">
+        
             <option value="favLanguage"></option>
             <option value="favLanguage">Javascipt</option>
             <option value="favLanguage">Python</option>
@@ -53,6 +62,8 @@
             <option value="favLanguage">C#</option>
 
     </select>
+
+</form>
         
 
 
