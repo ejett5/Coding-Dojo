@@ -1,0 +1,12 @@
+.background{
+    background-color: rgb(134, 52, 136);
+}
+
+#search{
+    color: rgb(7, 107, 74);
+    border-color: rgb(70, 153, 105);
+    background-color: antiquewhite;
+    text-align: center;
+    margin: 20 5 20 5;
+    padding: 20 5 20 5;
+}
