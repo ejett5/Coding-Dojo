@@ -5,24 +5,25 @@
 /* making the search button*/
 #search{
     color: rgb(7, 107, 74);
+    position:relative;
+    border: 10px 60px;
     border-color: rgb(70, 153, 105);
     background-color: antiquewhite;
     text-align: center;
-    margin: 20 5 20 5;
-    padding: 20 5 20 5;
-    border-radius: 35%;
-    border: 2px;
+    margin: 55px 35px 15px 155px;
     padding: auto;
 }
 
 /* styling the button to be rounded */
 .button{
     border-radius: 50%;
-    border: 2px;
+    border: 2px 10px;
+    margin: 30px 100px;
     padding: auto;
 }
 
 .createAccount{
     box-shadow: 5px 8px 6px whitesmoke;
+    margin: 30px 100px;
     
 }
