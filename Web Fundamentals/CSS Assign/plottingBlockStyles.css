@@ -1,6 +1,5 @@
 .container{
-    display: relative;
-    
+    display: relative;    
     width: 950px;
     background-color: silver;
     margin: auto auto;
@@ -17,6 +16,7 @@
 
 }
 .side-nav {
+    display: inline-block;
     height: 300px;
     width: 200px;
     background-color: blue;
@@ -25,8 +25,8 @@
 }
 .main {
     
-    vertical-align: top;
-    display: inline-block;
+    vertical-align: top; /* Jo suggested this line*/
+    display: inline-block; /* Jo suggested this line; sometimes both elements need to have this enabled to allow side by side blocking */
     height: 400px;
     width: 700px;
     background-color: red;
