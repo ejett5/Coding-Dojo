@@ -7,26 +7,31 @@
 .top-nav {
     height: 150px;
     background-color: green;
+    display: flex;
 }
 .side-nav {
     height: 300px;
     width: 200px;
     background-color: blue;
-    display: inline-block;
+    margin: 15px 5px 0px 5px;
+    display: flex;
+    
     
 }
 .main {
     height: 400px;
     width: 700px;
     background-color: red;
-    display: inline-block;
+    margin: 5px;
+    display: flex;
     
 }
 .sub-content {
     height: 200px;
     width: 210px;
     background-color: yellow;
-    display: inline-block;
+    display: flex;
+    
 }
 #advertisement {
     height: 120px;
@@ -34,6 +39,7 @@
     background-color: purple;
 }
 .row {
-    /* TODO - what should go here? */
+    /* TODO - what should go here? anything you want to define as a row class for styling, 
+    but the challenge is to just us css so why? */
 }
 
