@@ -1,0 +1,35 @@
+*{
+    background-color: aquamarine;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.nav-title{    
+    justify-content: center;
+    
+
+}
+
+
+.nav-links{
+    display: flex;    
+    justify-content: end;
+    gap: 10px;
+    align-items: end;
+    
+}
+
+
+.btn{
+    box-shadow: 3px 3px black ;
+
+}
+
+li{
+    list-style: none;
+}

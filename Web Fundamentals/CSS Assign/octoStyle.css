@@ -1,8 +1,7 @@
 .top{
     display: flex;
     background-color: blanchedalmond;
-    flex: 5px;
-    
+    flex: 5px;    
     border: 5px solid white;
     margin: 20px;
     justify-content: space-between;
