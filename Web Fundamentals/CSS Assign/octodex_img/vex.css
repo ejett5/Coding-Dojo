@@ -1,0 +1,18 @@
+
+
+.main{
+    background-color: goldenrod;
+    display: flex;
+}
+
+.green{
+    background-color: darkgreen;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.red{
+    background-color: maroon;
+}
