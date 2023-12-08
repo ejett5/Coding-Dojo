@@ -1,0 +1,19 @@
+.row{
+    display: flex;
+    background-color: burlywood;
+    
+}
+
+.col{
+    display: flex;
+    flex: 1;
+    background-color: teal;
+    margin: 3px;
+    justify-content: center;
+}
+
+.col-2{
+    display: flex;
+    flex: 2;
+    background-color: red;
+}
