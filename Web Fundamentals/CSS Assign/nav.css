@@ -93,10 +93,11 @@ li {
 .accept{
     display: flex;
     background-color: aliceblue;
-    justify-content: right;
+    
 }
 
 .options{
     display: flex;
     border: 3px solid;
+    justify-content: center;
 }
