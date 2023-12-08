@@ -1,98 +1,84 @@
 /* navigation bar */
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
-    
-    
+
+
 }
 
-.nav-title{    
+.nav-title {
     justify-content: center;
-    
+
 
 }
 
 
-.nav-links{
-    display: flex;    
+.nav-links {
+    display: flex;
     justify-content: end;
     gap: 10px;
     align-items: end;
-    
-}
-
-
-.btn{
-    box-shadow: 3px 3px black ;
 
 }
 
-li{
+
+.btn {
+    box-shadow: 3px 3px black;
+
+}
+
+li {
     list-style: none;
 }
 
 /* css for the body of the page */
 
-.main{
+.main {
     background-color: bisque;
-    position: fixed;
-    left: 10px;
-}
-    
-.grid-container{
-        background-color: bisque;
-    }
-    
-    .grid-item{
-        display: relative;
-        background-color:aliceblue;
-        border: 1px solid;
-        border-color: purple;
-        padding: 20px;
-        font-size: 15px;
-        text-align:justify;
-        height: 250px;
-        position: relative;
-        top: 25px;
-        right: 10px;
-        
-    }
 
-    .grid-item1{
-        display: relative;
-        background-color:aliceblue;
-        border: 1px solid;
-        border-color: purple;
-        padding: 20px;
-        font-size: 15px;
-        text-align:justify;
-        position: relative;
-        top: 5px;
-        left: 450px;
-        
-    }
-
-    .grid-item2{
-        display: relative;
-        background-color:aliceblue;
-        border: 1px solid;
-        border-color: purple;
-        padding: 20px;
-        font-size: 15px;
-        text-align:justify;
-        height: 100px;
-        position: relative;
-        top: 25px;
-        right: 10px;
-        
-    }
-
-p{
-    text-align: center;
-    font-size: large;
 }
 
-.sub{
-    font-size: smaller;
-    font-style: italic;
+.grid-container {
+    background-color: slategray;
+    display: flex;
+
+
+
+
+}
+
+.content-Left,
+.content-Right {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+
+
+
+}
+
+.content-Left {
+    flex: 2;
+    background-color: teal;
+}
+
+.blau {
+    background-color: aqua;
+}
+
+.content-Right {
+    flex: 1;
+    background-color: blueviolet;
+
+
+}
+
+.friends{
+    display: flex;
+    width: 10px;
+}
+
+.accept{
+    display: flex;
+    justify-content: right;
 }
