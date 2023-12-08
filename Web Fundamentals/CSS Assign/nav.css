@@ -41,6 +41,7 @@ li {
 .grid-container {
     background-color: slategray;
     display: flex;
+    width: 500px;
 
 
 
@@ -52,10 +53,13 @@ li {
     display: flex;
     flex-direction: column;
     background-color: teal;
-
-
-
 }
+
+
+.panelBar{
+    background-color: grey;
+}
+
 
 .content-Left {
     flex: 2;
@@ -66,6 +70,13 @@ li {
     background-color: aqua;
 }
 
+.top{
+    border: 3px;
+    margin-bottom: 15px;
+}
+
+/* Content for the Right Column*/
+
 .content-Right {
     flex: 1;
     background-color: blueviolet;
@@ -75,10 +86,17 @@ li {
 
 .friends{
     display: flex;
-    width: 10px;
+    
 }
+
 
 .accept{
     display: flex;
+    background-color: aliceblue;
     justify-content: right;
+}
+
+.options{
+    display: flex;
+    border: 3px solid;
 }
