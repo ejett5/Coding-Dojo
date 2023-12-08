@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* navigation bar */
 .nav {
     display: flex;
@@ -33,6 +38,12 @@ li {
 
 /* css for the body of the page */
 
+.bologna{
+    display: flex;
+    background-color: goldenrod;
+    
+}
+
 .main {
     background-color: bisque;
 
@@ -42,9 +53,6 @@ li {
     background-color: slategray;
     display: flex;
     width: 500px;
-
-
-
 
 }
 
@@ -86,6 +94,7 @@ li {
 
 .friends{
     display: flex;
+    justify-content: space-between;
     
 }
 
@@ -93,6 +102,7 @@ li {
 .accept{
     display: flex;
     background-color: aliceblue;
+    justify-content: space-between;
     
 }
 
