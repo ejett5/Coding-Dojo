@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+img{
+    height: 50px;
+    width: 100px;
+}
+
 /* navigation bar */
 .nav {
     display: flex;
@@ -38,11 +43,6 @@ li {
 
 /* css for the body of the page */
 
-.bologna{
-    display: flex;
-    background-color: goldenrod;
-    
-}
 
 .main {
     background-color: bisque;
@@ -53,6 +53,7 @@ li {
     background-color: slategray;
     display: flex;
     width: 500px;
+    margin: 10px;
 
 }
 
@@ -76,6 +77,7 @@ li {
 
 .blau {
     background-color: aqua;
+    display: flex;
 }
 
 .top{
