@@ -78,6 +78,7 @@ li {
 .blau {
     background-color: aqua;
     display: flex;
+    flex-direction: column;
 }
 
 .top{
