@@ -59,6 +59,11 @@ if(pokemon[i].id % 3 ==0){
 function moreThanOneType(pokemon) {
     //your code here
 }
+for(let i = 0; i < pokemon.length; i++){
+    if(pokemon[i].types >= 2){
+        console.log(pokemon[i]);
+        }
+    }
 
 /**
  * console.log the **just the names** of the pokemon whose only type is 'poison'
