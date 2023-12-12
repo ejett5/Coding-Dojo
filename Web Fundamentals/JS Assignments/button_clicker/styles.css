@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 3px;
+    font-style: italic;
+}
+
+/* header bar*/
+
+.nav{
+    background-color: gray;
+    display: flex;
+    width: auto;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.btn-nav{
+    background-color: rgb(85, 85, 228);
+
+}
+
+#search{
+    height: 40px;
+    align-items: center;
+}
+
+.dictionary{
+    background-color: seashell;
+    border: 3px solid;
+    width: 65%;
+    margin: 10px 10px 10px 25px;
+    display: flex;
+}
+
+.miniR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
