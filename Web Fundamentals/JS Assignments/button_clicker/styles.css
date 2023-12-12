@@ -8,6 +8,10 @@ p{
     font-style: italic;
 }
 
+h3{
+    font-style: oblique;
+}
+
 /* header bar*/
 
 .nav{
@@ -29,10 +33,19 @@ p{
     align-items: center;
 }
 
+/*main section of page */
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Left column content */
+
 .dictionary{
     background-color: seashell;
     border: 3px solid;
-    width: 65%;
+    width: 80%;
     margin: 10px 10px 10px 25px;
     display: flex;
 }
@@ -41,4 +54,14 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    pad: 3px;
+}
+
+/* Content for right to add definition */
+
+.bigRight{
+    background-color: beige;
+    
+    padding: 20px;
 }
