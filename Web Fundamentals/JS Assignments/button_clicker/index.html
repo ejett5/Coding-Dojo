@@ -13,44 +13,49 @@
     <div class="nav">
         <p>Dojonary</p>
         <input type="search" name="search" id="search">
-        <button onclick="Logout" class="btn-nav">Login</button> <!--changes when clicked-->
+        <button onclick="Logout(this)" class="btn-nav">Login</button> <!--changes when clicked-->
     </div>
 
     <!--Left Column-->
 <div class="main"> 
-    <div class="dictionary">
-        <div>
-            <h3>ninja</h3>
-            <p>noun</p>
-            <p><span style="font-style: normal;">plural:</span> ninjas</p>            
-            <button onclick="alert('Ninja was liked')">likes</button>
-        </div>
+    <div>
+        <div class="dictionary">
+            <div class="innerL">
+                <h3>ninja</h3>
+                <p>noun</p>
+                <p><span style="font-style: normal;">plural:</span> ninjas</p>            
+                <button onclick="alert('Ninja was liked')">likes</button>
+            </div>
         <!--element to the right of the box-->
-        <div class="miniR">
-            <p>A programmer who breaks down problemms with zen-like focus</p>
+            <div class="miniR">
+                <p>A practitioner skilled in the japanese art of ninjutsu</p>
+            </div>
         </div>
-    </div>   
+    
 
-    <!--lower box(es)-->
-
-    <div class="dictionary">
-        <div class="innerL">
-            <h3>ninja</h3>
-            <p>noun</p>
-            <p><span style="font-style: normal;">plural:</span> ninjas</p>            
-            <button onclick="alert('Ninja was liked')">likes</button>
-        </div>
+    <!--lower left column box(es)--> 
+    
+    
+        <div class="dictionary">
+            <div class="innerL">
+                <h3>ninja</h3>
+                <p>noun</p>
+                <p><span style="font-style: normal;">plural:</span> ninjas</p>            
+                <button onclick="alert('Ninja was liked')">likes</button>
+            </div>
         <!--element to the right of the box-->
-        <div class="miniR">
-            <p>A practitioner skilled in the Japanese art of ninjutsu</p>
+            <div class="miniR">
+                <p>A programmer who breaks down problemms with zen-like focus</p>
+            </div>
         </div>
+    
     </div>
 
     <!--Right Column *Disappears once used*-->
 
     <div class="bigRight">
         <p>Dojonary is defined by You!</p>
-        <button> Add Definition</button>
+        <button  onclick="hide(this)" class="vanish"> Add Definition</button>
     </div>
 
 

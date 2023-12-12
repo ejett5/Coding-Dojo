@@ -1,9 +1,10 @@
 console.log('testing the script is linked')
 
-function Logout(){
+function Logout(Element){
     Element.innerHTML = "Logout";
 }
 
-function custom(){
-
+function hide(element){
+//const element = document.getElementsByClassName("vanish");
+element.remove();
 }

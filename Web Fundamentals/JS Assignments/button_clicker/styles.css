@@ -21,6 +21,7 @@ h3{
     height: 50px;
     margin-left: 15px;
     margin-right: 15px;
+    justify-content: space-between;
 }
 
 .btn-nav{
@@ -38,7 +39,7 @@ h3{
 
 .main{
     display: flex;
-    flex-direction: column;
+    
 }
 
 /* Left column content */
@@ -46,9 +47,15 @@ h3{
 .dictionary{
     background-color: seashell;
     border: 3px solid;
-    width: 80%;
+    flex: 2;
     margin: 10px 10px 10px 25px;
     display: flex;
+    flex-direction: column;
+}
+
+.innerL{
+    display: flex;
+    flex-direction: column;
 }
 
 .miniR{
@@ -63,6 +70,14 @@ h3{
 
 .bigRight{
     background-color: beige;
-    
+    display: flex;
+    flex: 1;
+    border: 2px solid;
     padding: 20px;
+}
+
+.vanish{
+    background-color: green;
+    color: goldenrod;
+    padding: 5px;
 }
