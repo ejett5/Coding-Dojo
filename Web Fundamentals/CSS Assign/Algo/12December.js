@@ -39,11 +39,14 @@ var pokemon = [
 
 function divisibleByThree(pokemon) {
 //your code here
-for(i=0; i< pokemon[0] % 3; i++){
-    console.log(pokemon.id)
+//if pokemon.id is % by 3 then display
+for(let i = 0; i < pokemon.length; i++){
+if(pokemon[i].id % 3 ==0){
+    console.log(pokemon[i]);
     }
+}
 
-
+//otherwise keep looking untill the end of the list is reached
 }
     
 
