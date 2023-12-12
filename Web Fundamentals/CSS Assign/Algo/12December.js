@@ -39,14 +39,10 @@ var pokemon = [
 
 function divisibleByThree(pokemon) {
 //your code here
+for(i=0; i< pokemon[0] % 3; i++){
+    console.log(pokemon.id)
+    }
 
-//check if more than one type
-if (i = 0; i > pokemon.types; i++){
-    result = pokemon.type > 1
-    
-}
-
-console.log()
 
 }
     
