@@ -75,10 +75,16 @@ li {
     background-color: teal;
 }
 
-.blau {
+.blau { /* Position is used here to shove image outside container area*/
     background-color: aqua;
     display: flex;
     flex-direction: column;
+    
+}
+.img{
+    position: relative;
+    left: 0px;
+    top: 25px;
 }
 
 .top{
