@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    background-color: black;
+    color: aliceblue;
+}
+
+.main{
+    background-color: burlywood;
+}
+
+.body{
+    background-color: turquoise;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px;
+    
+}
+
+.inner{
+    display: flex;
+    flex-direction: row;
+}
