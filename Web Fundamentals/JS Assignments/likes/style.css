@@ -2,34 +2,61 @@
     margin: 0;
     padding: 0;
 }
+button{
+    box-shadow: 2px 5px grey;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
 
 .banner{
     background-color: black;
     color: aliceblue;
+    margin: 0px 20px 10px 20px;
 }
 
 .main{
     background-color: burlywood;
     display: flex;
     margin: 3px;
-    width: 500px;
+    /* width: 500px; */
+    justify-content: center;
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    padding: 5px;
 }
 
 .userCard{
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin: 10px;
     padding: 5px;
     justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 2px solid;
 }
 
 .infoCard{
     background-color: turquoise;
     border: 2px solid;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column; 
     justify-content: space-between;
-    margin-left: 10px;
+    margin: 10px;
     padding: 3px;
 }
 
@@ -44,4 +71,5 @@
 .inner{
     display: flex;
     flex-direction: row;
+    margin: 2px;
 }
