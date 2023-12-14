@@ -46,3 +46,5 @@ function flatten2dArray(twoDimArr) {
 }
 
 console.log(flatten2dArray(twoDimArr1))
+console.log(flatten2dArray(twoDimArr2))
+console.log(flatten2dArray(twoDimArr3))
