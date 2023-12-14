@@ -10,14 +10,23 @@
 
 .main{
     background-color: burlywood;
+    display: flex;
+    margin: 3px;
 }
 
-.body{
+.userCard{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.infoCard{
     background-color: turquoise;
     border: 2px solid;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-between;
+    margin-left: 10px;
     padding: 3px;
 }
 

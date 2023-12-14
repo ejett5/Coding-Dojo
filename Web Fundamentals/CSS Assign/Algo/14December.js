@@ -27,7 +27,7 @@ const expected3 = [10, 20];
 function flatten2dArray(twoDimArr) {
     // code here
 
-    var bigBoy = []
+    var bigBoy = [];
     //as long as there is something in the array put it in a new array
     for(let i = 0; i < twoDimArr.length; i++){
         if(twoDimArr1[i].length > 0){            
@@ -36,7 +36,7 @@ function flatten2dArray(twoDimArr) {
 
         //this is another idea to look into other loops to then look into others and remove them as individual arrays
         for(let j=0;j<twoDimArr.j; j++){
-                bigBoy.push(items[i])
+                bigBoy.push(items[i][j])
             }
         
         }
