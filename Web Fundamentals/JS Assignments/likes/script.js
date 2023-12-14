@@ -1,12 +1,17 @@
+console.log("test script")
+
+
 // setting up counter for like button
-function (likeCounter){
-    let count = 0;
-    let btn = document.getElementById("btn");
-    let disp = document.getElementById("display");
+//naming the function
+var button = document.getElementById("clicked"),
+    count = 0;
+//connecting to the button input
+function clicked() {
     
-    btn.addEventListener("click",function (likeCounter){
-        count++;
-        disp.innerHTML = count;
-    });
-}
+    //after each click send to a display
+    count += 1
+    //display each click starting from 0 and tallying click of the button
+    button.innerText = "clicked" + count;
+};
+
 
