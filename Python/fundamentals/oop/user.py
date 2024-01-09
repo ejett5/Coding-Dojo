@@ -8,12 +8,39 @@ class User:
         self.last = last_name
         self.email = email
         self.age = age
-        self.is_rewards_memeber = False
+        self.is_rewards_member = False
         self.gold_card_points = 0
+        self.spend_rewards_points = self.gold_card_points #- 80
         #display_info intended to print all user info
-        # display_info(self)  ##assignment said to add this to the class but it is wrong as there is just an empty; changing levels has no effect and only adds erros
-        #there is no parameter or arg for display_info(self) and returns undefined error
+    def display_info(self):
+        print(self.first, self.last, self.email, self.age, self.is_rewards_member, self.gold_card_points )
+
+    def enroll_self(self):
+        self.is_rewards_member = True
+        
+    def spend_points(self, amount):  
+        self.gold_card_points -=  amount
+
+
         
 #making users and printing their data for display  
 user_default_1 = User('John', 'Doe', 'fake123@email.com', '42')
-print(user_default_1)
+print(user_default_1.display_info())
+user_default_1.is_rewards_member = True #changing to rewards memeber
+user_default_1.gold_card_points = 200
+print(user_default_1.display_info()) #showing change in memeber status
+user_default_1.spend_points(50)  #arg in funct will activate the funct created earlier and then run with the value placed in
+print(user_default_1.display_info())
+
+#creating another instance of user
+user_Sally = User('Sally', 'Ride', 'first2space@nasa.net', 61)
+print(user_Sally.display_info())
+user_Sally.spend_points(80)
+print(user_Sally.display_info)
+
+#make second user
+billy_mitchell = User('Billy','Mitchell', 'brigadiergen@USAF.net', '56')
+# print(billy_mitchell.display_info())
+billy_mitchell.gold_card_points = 999999
+billy_mitchell.is_rewards_member = True
+print(billy_mitchell.display_info())

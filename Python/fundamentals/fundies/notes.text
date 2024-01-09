@@ -1,0 +1,8 @@
+                        9 January 2024  
+attributes are like variables as they hold information
+    -the attributes describe the class (such as an adjective describes the noun)
+
+an INstance is something that is active in that moment and when not being used is a blueprint for the next time you want to do that action again
+
+Self is the same as This(from js): anchors an action place to the action
+Method is the same as a js Function
