@@ -2,7 +2,7 @@
 String Decode  
 */
 
-const str1 = "a3b2cd3";  //apparently changing the inputs is not alloweed... not smart but okay
+const str1 = "a3b2cd3";  //apparently changing the inputs format is not alloweed... not smart but okay
 const expected1 = "aaabbcddd";
 
 const str2 = "a3b2c12d10";
