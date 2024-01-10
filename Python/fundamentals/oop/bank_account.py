@@ -40,4 +40,6 @@ class BankAccount:
         # return "pilot"
         
 jm_toyota = BankAccount('18', '100', '20', '1', '3.5')
-print(jm_toyota.display_account_info())
+jack_black = BankAccount('3', '55', '100', '80', '3')
+pedro_pascal = BankAccount('180', '1', '400', '142', '10')
+print(jm_toyota.display_account_info(), jack_black.display_account_info(), pedro_pascal.display_account_info())
