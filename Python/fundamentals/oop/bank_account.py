@@ -1,4 +1,4 @@
-print("Hello World!")
+# print("Hello World!")
 
 class BankAccount:
     # don't forget to add some default values for these parameters!
@@ -13,7 +13,7 @@ class BankAccount:
         # print()
 
     def deposit(self, deposit):
-        """string"""
+        
         if(self.balance >= 0):
             self.balance += deposit #TODO link the amount to update balance
             # print(self.balance)
@@ -37,9 +37,13 @@ class BankAccount:
     def display_account_info(self):
 
         print(self.interest_rate, self.balance,self.withdraw, self.deposit, self.yield_interest) 
-        # return "pilot"
+        return ""  #interpeter is taking this as another print but will show none or 0 without an empty return TODO figure out why it is reading it this way
         
-jm_toyota = BankAccount('18', '100', '20', '1', '3.5')
-jack_black = BankAccount('3', '55', '100', '80', '3')
-pedro_pascal = BankAccount('180', '1', '400', '142', '10')
+jm_toyota = BankAccount(18, 100, 20, 1, 3.5)  #made as strings to test and made no difference on call
+jack_black = BankAccount(3, 55, 100, 80, 3)
+pedro_pascal = BankAccount(180, 1, 400, 142, 10)
 print(jm_toyota.display_account_info(), jack_black.display_account_info(), pedro_pascal.display_account_info())
+# print(f"jm_toyota.display_account_info() + jack_black.display_account_info(), pedro_pascal.display_account_info()")  #just playing around to see if f string can be pushed in and combine multiples
+# jm_toyota.withdraw(200).yield_interest_rate(5).display_account_info()  #TODO why is int not callable?
+# jack_black.deposit(55).deposit(50).withdraw(1).withdraw(1).withdraw(1).withdraw(1).display_account_info()  #TODO why is int not callable?
+# pedro_pascal.withdraw(200).yield_interest_rate(5).display_account_info()  #TODO why is int not callable?
