@@ -6,16 +6,16 @@ class BankAccount:
         self.interest_rate = int_rate
         self.balance = balance
         self.withdraw = withdraw
-        self.deposit = deposit
+        self.deposit = amount
         self.yield_interest = yield_interest
         # self.amount = amount
         # self.user_name = user
         # print()
 
-    def deposit(self, deposit):
+    def deposit(self, amount):
         
         if(self.balance >= 0):
-            self.balance += deposit #TODO link the amount to update balance
+            self.balance += amount #TODO link the amount to update balance
             # print(self.balance)
         else: 
             print("Please reach out to our representatives at: 555-555-5555")
@@ -38,6 +38,12 @@ class BankAccount:
 
         print(self.interest_rate, self.balance,self.withdraw, self.deposit, self.yield_interest) 
         return ""  #interpeter is taking this as another print but will show none or 0 without an empty return TODO figure out why it is reading it this way
+    
+    class __init__(BankAccount):
+        def super__init__(self):
+            super().__init__()
+            self.make_deposit = make_deposit
+
         
 jm_toyota = BankAccount(18, 100, 20, 1, 3.5)  #made as strings to test and made no difference on call
 jack_black = BankAccount(3, 55, 100, 80, 3)
