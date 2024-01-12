@@ -13,3 +13,13 @@ if __name__ =="__main__":
 def hello(name):
     print(name)
     return "Hello, " + name
+
+
+@app.route('/hello/<name>')
+def hello(name):
+    print(name)
+    return "Hello, " + name
+
+@app.route('/success')
+def success():
+    return "success"
