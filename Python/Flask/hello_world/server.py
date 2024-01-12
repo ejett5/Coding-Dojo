@@ -4,7 +4,6 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World'
 if __name__ =="__main__":
-
     app.run(debug=True, host = "localhost", port = 8443)
 
 #adding another route to the server
@@ -23,3 +22,7 @@ def hello(name):
 @app.route('/success')
 def success():
     return "success"
+
+@app.route('/hello/<name>/<int:num>')
+def hello(name,num):
+    return f"Hello, {name * num}"
