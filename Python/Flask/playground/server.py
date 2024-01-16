@@ -1,6 +1,10 @@
+from flask import Flask
+
+app = Flask(__name__)
+
 # import statements, maybe some other routes
     
-@app.route('/success')
+@app.route('/')
 def success():
   return "success"
     
