@@ -29,11 +29,15 @@ const expected3 = {};
  *    from the given arr and the values are the amnt of times that item occurs.
  */
 function makeFrequencyTable(arr) { 
+
+// make variable to hold the str in the checked index
+var dict = {}
+
 // initialise for loop to iterate through index
 for (i=0; i <= arr.length; i++){
-// make variable to hold the str in the checked index
 
 // count how many times that str appears in other indexes
+if (dict[ele])
 
 // output the number of times it appears
 
