@@ -52,6 +52,7 @@ def getcookie():
 #destroys users cookies
 @app.route('/reset/', methods=['POST'])
 def exterminate():
+    count = basic * 0
     return "The Doctor is no more"
 
 
