@@ -5,6 +5,22 @@ from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = ''
 
+@app.route('/')
+def basic():
+    count = int(request.cookies.get('basic', 0))
+    count = count+1
+    output = "You've visited the page " +str(count) + 'times!'
+    resp = 'make_response(output)'
+    resp.set_cookie('basic', str(count))
+    return resp
+
+#pulling cookie data
+@app.route('/get/')
+def get_visitors_count():
+    count = request.cookies.get('basic')
+    return count
+
+
 #route to verify functionality
 @app.route('/test')
 def test():
@@ -17,6 +33,19 @@ def counter():
     #here goes the info for tracking user visits
     return redirect('/Welcome')
 
+#create cookies
+@app.route('/setcookie')
+def setcookie():
+    #initializing response object
+    resp = 'make_response'('Setting Cookie')
+    resp.set_cookie('GFG', 'ComSci Portal') #here the response for the getcookie is set and the second value is the argument to be passed when called later(can be used to call another route or temp?)
+    return resp
+
+@app.route('/getcookie')
+def getcookie():
+    GFG = request.cookies.get('GFG')
+    return 'GFG is a '+ GFG
+
 #destroys users cookies
 @app.route('/reset/', methods=['POST'])
 def exterminate():
@@ -25,4 +54,4 @@ def exterminate():
 
 
 #last section to run the code
-app.run()
+app.run(debug =True)
