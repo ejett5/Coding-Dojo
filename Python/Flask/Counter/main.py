@@ -1,10 +1,12 @@
 #main python routing file
 
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, make_response
+# from fastapi import Response    
 
 app = Flask(__name__)
 app.secret_key = ''
 
+#TODO discover why str has no attribute for set_cookie, (https://www.pythonanywhere.com/forums/topic/28590/) had similar issue and caused by not having attribute table
 @app.route('/')
 def basic():
     count = int(request.cookies.get('basic', 0))
@@ -14,6 +16,7 @@ def basic():
     resp.set_cookie('basic', str(count))
     return resp
 
+#TODO why is the return not recognised when hosting?
 #pulling cookie data
 @app.route('/get/')
 def get_visitors_count():
