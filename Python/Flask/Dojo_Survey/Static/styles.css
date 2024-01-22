@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+title{
+    align-items: center;
+    color: blueviolet;
+}
+
+/* making divs for dojo survey form */
+
+/* container for form */
+.containter{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+}

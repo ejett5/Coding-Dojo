@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/styles.css)}}"> -->
+    <title>Home</title>
+</head>
+<body>
+    <h1>Survey Home Page</h1>
+    <p>Below you will find the results of the dojo survey. (if empty then you may be the first entry!)</p>
+
+    <!-- making the form container -->
+    <div class="container">
+        <!-- contents for the top -->
+        <div class="contents">
+            <form action="post">
+                <label for="Name">Your Name: </label>
+                <input type="text">
+                <!-- label and dropdown for dojo location -->
+                <label for="Location">Dojo Location: </label>
+                <select name="Location" id="Location">
+                    <option value="online">Online</option>
+                    <option value="sanfran">San Francisco</option>
+                    <option value="jose">San Jose</option>
+                </select>
+                <!-- options for programming languages -->
+                <label for="Favorite Language">Favorite Language: </label>
+                <select name="Favorite Language" id="Favorite Language">
+                    <option value="python">Python</option>
+                    <option value="C">C</option>
+                    <option value="Java">Java</option>
+                    <option value="kobal">kobal</option>
+                    <option value="!python">!python</option>
+                </select>
+                <!-- optional comment section -->
+                <label for="comment">Comments (optional)</label>
+                <input type="textarea">
+            </form>
+            <input type="submit" value="Submit">
+
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
