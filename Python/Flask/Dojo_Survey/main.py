@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, session, request
+from flask import Flask, render_template, redirect, session, request, flash
+from mysqlconnection import connectToMySQL
+
 
 
 app = Flask(__name__,template_folder='Template', static_folder='static') #need to have template_folder with template folder name for it to retrieve the index.html file
@@ -23,10 +25,11 @@ class Survey_Results:
         self.updated_at = data['updated_at']
 
 # adding more results to the survey
-@app.route('/result/add_new')
+@app.route('/result/add_new/')
 def add_new():
     query = """ INSERT into {table name} (Name, Location, Favorite Language, Comments)
-            VALUES(%(Name)s,%)""""        
+            VALUES(%(Name)s,%) """
+    return render_template('index.html/result/add_new/')
 
 # route for rendering submitted info
 @app.route('/Survey_Results/')
