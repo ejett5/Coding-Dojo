@@ -21,10 +21,15 @@ class Survey_Results:
         self.Language = data['Favorite Language']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
-        
+
+# adding more results to the survey
+@app.route('/result/add_new')
+def add_new():
+    query = """ INSERT into {table name} (Name, Location, Favorite Language, Comments)
+            VALUES(%(Name)s,%)""""        
 
 # route for rendering submitted info
-@app.route('/result/')
+@app.route('/Survey_Results/')
 def process():
     return render_template('result.html')
 
