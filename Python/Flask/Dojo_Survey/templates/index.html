@@ -15,27 +15,27 @@
         <!-- contents for the top -->
         <div class="contents">
             <form action="/home" method = 'POST'>
-                <label for="Name">Your Name: </label>
-                <input type="text">
+                <label for="name">Your Name: </label>
+                <input type="text" name = "name">
                 <!-- label and dropdown for dojo location -->
-                <label for="Location">Dojo Location: </label>
-                <select name="Location" id="Location">
+                <label for="location">Dojo Location: </label>
+                <select name="location" id="Location">
                     <option value="online">Online</option>
                     <option value="sanfran">San Francisco</option>
                     <option value="jose">San Jose</option>
                 </select>
                 <!-- options for programming languages -->
-                <label for="Favorite Language">Favorite Language: </label>
-                <select name="Favorite Language" id="Favorite Language">
+                <label for="favorite_language">Favorite Language: </label>
+                <select name="favorite_language" id="Favorite Language">
                     <option value="python">Python</option>
-                    <option value="C">C</option>
-                    <option value="Java">Java</option>
+                    <option value="csharp">C #</option>
+                    <option value="java">Java</option>
                     <option value="kobal">kobal</option>
                     <option value="!python">!python</option>
                 </select>
                 <!-- optional comment section -->
                 <label for="comment">Comments (optional)</label>
-                <input type="textarea">
+                <input type="textarea" name = "comment">
                 <input type="submit" value="Submit">
             </form>
             <!-- TODO connect to main.py for redirect and submission -->
