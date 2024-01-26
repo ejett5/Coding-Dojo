@@ -9,7 +9,7 @@ def index():
     return render_template('index.html')
     # print(render_template('index.html')) #working on console debugger method to find fail points similar to console.log in js
 
-@app.route('/', methods = ['POST'])
+@app.route('/home', methods = ['POST'])
 def home():
     session['Name'] = request.form['Name']
     session['Programming Language'] = request.form['Programming Language']

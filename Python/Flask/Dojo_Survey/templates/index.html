@@ -14,7 +14,7 @@
     <div class="container">
         <!-- contents for the top -->
         <div class="contents">
-            <form action="post">
+            <form action="/home" method = 'POST'>
                 <label for="Name">Your Name: </label>
                 <input type="text">
                 <!-- label and dropdown for dojo location -->
@@ -36,9 +36,9 @@
                 <!-- optional comment section -->
                 <label for="comment">Comments (optional)</label>
                 <input type="textarea">
+                <input type="submit" value="Submit">
             </form>
             <!-- TODO connect to main.py for redirect and submission -->
-            <input type="submit" value="Submit">
 
 
         </div>
