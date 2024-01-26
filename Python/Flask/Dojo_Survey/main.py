@@ -1,17 +1,21 @@
 from flask import Flask, render_template, redirect, session, request, flash
-from mysqlconnection import connectToMySQL
+from mysqlconnection import connectToMySQL  #the from statement is the module being imported(also able to import another file for sql connection)
 
 
 
-app = Flask(__name__,template_folder='Template', static_folder='static') #need to have template_folder with template folder name for it to retrieve the index.html file
-@app.route('/', methods =['GET','POST'])#
+app = Flask(__name__) #need to have template_folder with template folder name for it to retrieve the index.html file
+@app.route('/', methods =['GET'])#need to have logic to access get and post, especially when combined
+def index():
+    return render_template('index.html')
+    # print(render_template('index.html')) #working on console debugger method to find fail points similar to console.log in js
+
+@app.route('/', methods = ['POST'])
 def home():
     session['Name'] = request.form['Name']
     session['Programming Language'] = request.form['Programming Language']
     session['Dojo Location'] = request.form['Dojo Location']
     return render_template('index.html')
     return redirect('/result/')
-    # print(render_template('index.html')) #working on console debugger method to find fail points similar to console.log in js
 
 #creating class to hold the survey results
 class Survey_Results:
@@ -37,5 +41,21 @@ def process():
     return render_template('result.html')
 
 
+#making form validation 
+# class thing:
+# @staticmethod
+# def validate_users(thing):
+#     is_valid = Trueif len(users['first_name']) < 3:
+#         flash("name must be a minimum of 3 characters.")
+#         is_valid = False
+#     is_valid = Trueif len(users['last_name']) < 3:
+#         flash("name must be a minimum of 3 characters.")
+#         is_valid = False
+#     is_valid = Trueif len(users['email']) < 3:
+#         flash("must be a minimum of 3 characters.")
+#         is_valid = False
+#     return is_valid
+
+
 if __name__ =='__main__':
-    app.run(debug=True, port= 5000)
+    app.run(host = '0.0.0.0' ,debug=True, port= 5000)
