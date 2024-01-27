@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, session, request, flash
-from mysqlconnection import connectToMySQL  #the from statement is the module being imported(also able to import another file for sql connection)
+from mysqlconnection import connectToMySQL, query #the from statement is the module being imported(also able to import another file for sql connection)
 from survey import Survey
 
 
@@ -22,7 +22,12 @@ def result():
 
 @classmethod
 def get_all(cls):
-    query = "SELECT * FROM dojo_survey"
+    query = "SELECT * FROM dojo_survey_schema WHERE id = %(id)s;"
+    results = connectToMySQL(cls.DB).query_db(query)
+    Survery = []
+    for [id] in Survey:
+        id.append( cls(Survey) )
+    return Survey
 
 
 
