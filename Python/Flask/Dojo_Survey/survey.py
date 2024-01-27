@@ -6,7 +6,9 @@ class Survey:
     DB = "dojo_survey_schema" #put name of schema to be used here inside db
     def __init__(self, data):
         self.id = data[id]
-        self.name = data['name']
+        self.name = data['first_name']
+        self.name = data['last_name']
+        self.name = data['email']
         self.location = data['location']
         self.favorite_language = data['favorite_language']
         self.comment = data['comment']
