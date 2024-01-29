@@ -11,9 +11,12 @@
     <!-- to display the results from the main.py survey  -->
     <!-- TODO get it to connect to the server and GET the data -->
     {% for name in main  %}
-        <p>Name: {{ Name.Name }}</p>
-        <p>Location: {{ Location.Location }}</p>
-        <p>Favorite Language: {{ Favorite Language.Favorite Language }}</p>
+        <p>Name: {{ first_name.first_name }}</p>
+        <p>Name: {{ last_name.last_name }}</p>
+        <p>Name: {{ email.email }}</p>
+        <p>Location: {{ location.location }}</p>
+        <p>Favorite Language: {{ favorite_language.Favorite Language }}</p>
+        <p>Favorite Language: {{ comments.comments }}</p>
         
     {% endfor %}
     

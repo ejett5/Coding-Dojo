@@ -3,7 +3,7 @@ from mysqlconnection import connectToMySQL
 
 #creating class to hold the survey results
 class Survey:
-    DB = "dojo_survey_schema" #put name of schema to be used here inside db
+    DB = "users_schema" #put name of schema to be used here inside db
     def __init__(self, data):
         self.id = data[id]
         self.name = data['first_name']
@@ -15,11 +15,20 @@ class Survey:
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
+        @staticmethod
+        def validate_survey(form_data):
+            #validating data 
+            if 'first_name' not in form_data or 'last_name' not in form_data
+                return False
+            return True    
+        
+
+
 
         
     @classmethod
     def save(cls, data):
-        query = """ INSERT into survey (name, location, favorite_language, comments)
+        query = """ INSERT into survey (first_name, last_name, email,  location, favorite_language, comments)
                 VALUES(%(name)s,%(location)s,%(favorite_language)s,%(comment)s) """
         result = connectToMySQL(cls.DB).query_db(query,data)
         return result
