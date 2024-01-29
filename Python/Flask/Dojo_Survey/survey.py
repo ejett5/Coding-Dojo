@@ -8,17 +8,17 @@ class Survey:
         self.id = data[id]
         self.name = data['first_name']
         self.name = data['last_name']
-        self.name = data['email']
+        self.email = data['email']
         self.location = data['location']
         self.favorite_language = data['favorite_language']
         self.comment = data['comment']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
-        @staticmethod
+        
         def validate_survey(form_data):
             #validating data 
-            if 'first_name' not in form_data or 'last_name' not in form_data
+            if 'first_name' not in form_data or 'last_name' not in form_data:
                 return False
             return True    
         
