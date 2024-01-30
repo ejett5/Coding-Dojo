@@ -16,11 +16,11 @@ class Survey:
         self.updated_at = data['updated_at']
 
         
-        def validate_survey(form_data):
-            #validating data 
-            if 'first_name' not in form_data or 'last_name' not in form_data:
-                return False
-            return True    
+    def validate_survey(form_data):
+        #validating data 
+        if 'first_name' not in form_data or 'last_name' not in form_data:
+            return False
+        return True    
         
 
 
@@ -32,6 +32,13 @@ class Survey:
                 VALUES(%(name)s,%(location)s,%(favorite_language)s,%(comment)s) """
         result = connectToMySQL(cls.DB).query_db(query,data)
         return result
+    
+    @classmethod
+    def get_all(cls):
+        query = "SELECT * FROM survey;"
+        results = connectToMySQL(cls.DB).query_db(query)
+        surveys = [cls(result) for result in results]
+        return surveys
 
 
 
