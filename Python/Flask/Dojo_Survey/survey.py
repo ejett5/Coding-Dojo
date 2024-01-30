@@ -28,8 +28,8 @@ class Survey:
         
     @classmethod
     def save(cls, data):
-        query = """ INSERT into survey (first_name, last_name, email,  location, favorite_language, comments)
-                VALUES(%(name)s,%(location)s,%(favorite_language)s,%(comment)s) """
+        query = """ INSERT into survey (first_name, last_name, email,  location, favorite_language, comment)
+                VALUES(%(first_name)s,%(last_name)s,%(email)s,%(location)s,%(favorite_language)s,%(comment)s) """
         result = connectToMySQL(cls.DB).query_db(query,data)
         return result
     
