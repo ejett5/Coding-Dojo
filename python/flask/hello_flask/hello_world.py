@@ -16,10 +16,15 @@ def flask():
 
 
 #returns Hi and given name on page
-@app.route('/say/{name}')
-def say():
-    return 'Hi {name}'
+@app.route('/say/<string:name>')
+def say(name):
+    return f'Hi, {name}'
 
+
+#returns repeats message stated number of times on page
+@app.route('/repeat/<string:name>/<int:num>')
+def repeat(name, num):
+    return(f'{name}\n'*num)
 
 
 if __name__== "__main__":
