@@ -68,7 +68,8 @@ function reverseString(str) {
     //✨ try to do it with and without built-in methods
     let empty = []
     for(let i = 0; i < str.length ; i++){
-        let loop = str[i]
+        let loop = str[i];
+        
         empty.push(loop);
         // console.log(loop)
 
