@@ -15,4 +15,4 @@ print( "The given name of: ", str(name))
 fave_food1 = "chicken"
 fave_food2 = "pizza"
 print("Two of my favorite foods are {}, and {}.".format(fave_food1, fave_food2)) #use .format()
-print(f"When I am hungry my protein of choice is usually {fave_food1}. Sometimes it is good to just enjoy what I want to eat so I willg eat {fave_food2}.") #use f string
+print(f"When I am hungry my protein of choice is usually {fave_food1}. Sometimes it is good to just enjoy what I want to eat so I will eat {fave_food2}.") #use f string
