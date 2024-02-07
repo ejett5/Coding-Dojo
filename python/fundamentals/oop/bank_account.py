@@ -57,8 +57,8 @@ pedro_pascal = BankAccount(180, 1, 400, 142, 10) #TODO figure out why this stop 
 print(jm_toyota.display_account_info(), jack_black.display_account_info(), pedro_pascal.display_account_info())
 
 #updating info to user accounts
-jm_toyota.deposit() == 50
-# # jm_toyota.deposit() == 50
+jm_toyota.deposit(50).deposit(50)
+# jm_toyota.deposit(50)
 print(jm_toyota.display_account_info()) #adding this section of code causes the pedro_pascal to have issues printing from the deposit att
 
 
