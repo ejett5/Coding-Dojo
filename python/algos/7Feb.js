@@ -31,17 +31,21 @@
      */
     function encodeStr(str) {
         // Your Code here 🌻
+
+        // var count_Str = 0
+
         // Also some code to get started:  //Loop through and count str to following str
         for(i = 0; i <= str.length; i++)
         // making if loop to count the string or to just output the original string
-            if(){
-                i = CountStr
-                console.log(countStr)
 
-            }else{
-                str = '';
-            }
-    
+        
+
+            // if(str.charAt(i) == count_Str){ //this only looks for a specified character and not counting anything that is there
+            //     count_Str += 1;
+            // }
+            // console.log(count_Str(str1));
+            // return count_Str;
+
         // Our string we want to return at the end.
         let encoded = ""
     
