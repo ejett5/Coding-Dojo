@@ -61,6 +61,16 @@ const expected_1 = { Zaphod: "name", high: "charm", dicey: "morals" };
 function invertObj(obj) {
     // Hint: we can use Object.entries(obj) similar to how we use .items() in Python. 
     // MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+    var answer = []
+for(const [key,value] of Object.entries(obj)){
+    answer[value] = key
+    
+
 }
+console.table(answer)  //a way to view the data in a more visual way
+return answer
+}
+console.table(obj_1)
+invertObj(obj_1)
 
 /*****************************************************************************/
