@@ -10,16 +10,23 @@ def index():
 
 
 # # main route for homepage
-@app.route('/home/')
-# @app.route('/play/<color>/<number>/')
-def home():
-    return render_template('index.html')
+# @app.route('/home/')
+# # @app.route('/play/<color>/<number>/')
+# def home():
+#     return render_template('index.html')
 
 # make a page view that displays color boxes and repeats them
-@app.route('/play/<phrase>/<int:number>/')
+@app.route('/trials/<phrase>/<int:number>/')
 # @app.route('/play/<x>/<y>')
 def box_playground(phrase, number):
     return render_template('game.html', phrase = phrase, number = number)
+
+
+@app.route('/play/')
+@app.route('/play/<int:x>/')
+# @app.route('/play/<x>/<y>')
+def box_playground_render(x):
+    return render_template('boxs.html', x = x)
 
 # final line of code that runs the preceeding code
 if __name__ == "__main__":

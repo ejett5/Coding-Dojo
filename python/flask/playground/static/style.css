@@ -4,3 +4,14 @@
     background-color: cadetblue;
 }
 
+.main{
+    margin: 5px;
+    align-content: center;
+    text-align: center;
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    
+}
