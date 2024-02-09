@@ -5,6 +5,9 @@
 </head>
 
 <body> 
+
+    
+
     <div class="row" style="align-items: center;">
         <h3>HTML Table</h3>
         <table>
@@ -13,13 +16,15 @@
                 <th>Last Name</th>
                 <th>Full Name</th>
             </tr>
-            <tr> {% for u in users %}
+            {% for u in users %}
+            <tr>
                 <td>{{u.first_name}}</td>
                 <td>{{u.last_name}}</td>
                 <td>{{u.first_name}} {{u.last_name}}</td>
             </tr>
             {% endfor %}
         </table>
+        
 
 </body>
 </html>
