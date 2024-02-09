@@ -1,7 +1,7 @@
 from flask import Flask
 from players import users
 
-app=Flask(__name__)
+app = Flask( __name__ )
 
 @app.route('/')
 
@@ -9,5 +9,5 @@ app=Flask(__name__)
 
 
 
-if__name__ = "__main":
-    app.run(debug=True, port = 443)
+if __name__ == "__main":
+    app.run(debug = True, port = 443)
