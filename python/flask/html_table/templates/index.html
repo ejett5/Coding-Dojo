@@ -1,11 +1,26 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
+<html>
 <head>
 
 </head>
 
 <body> 
-    <h1> Players Table </h1>
-    
+    <div class="row" style="align-items: center;">
+        <h3>HTML Table</h3>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+            </tr>
+            <tr> {% for u in users_data %}
+                <td>{{u.first_name}}</td>
+                <td>{{u.last_name}}</td>
+                <td>{{u.first_name}} {{u.last_name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
 
 </body>
 </html>
+
