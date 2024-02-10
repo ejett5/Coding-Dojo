@@ -15,6 +15,10 @@ def home():
 def submit():
     return redirect('/results.html')
 
+@app.route('/result/')
+def result():
+    return render_template('results.html')
+
 
 # final line to execute code
 if __name__ == '__main__':

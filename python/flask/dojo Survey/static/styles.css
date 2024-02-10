@@ -4,7 +4,42 @@
     background-color: burlywood;
 }
 
+h1{
+    text-align: center;
+    background-color: cadetblue;
+}
+
 .form{
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    text-align: justify;
+    background-color: cadetblue;
+    margin: 3em;
+    padding: 0.5em;
 }
+
+
+button{
+    background-color: red;
+}
+
+.boop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blueviolet;
+    text-align: justify;
+    border: 1px solid black;
+    
+    padding: 0.5em;
+
+}
+
+.entry{
+display: flex;
+justify-content: center;
+background-color: chartreuse;
+
+}
+
