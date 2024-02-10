@@ -25,10 +25,10 @@ def box_playground(phrase, number):
 
 
 @app.route('/play/')
-@app.route('/play/<y>/<int:x>/')
+@app.route('/play/<int:x>/<color>/')
 # @app.route('/play/<x>/<y>')
-def box_playground_render(y,x):
-    return render_template('boxs.html', x = x)
+def box_playground_render(x, color):
+    return render_template('boxs.html', x = x, color = color)
 
 # final line of code that runs the preceeding code
 if __name__ == "__main__":
