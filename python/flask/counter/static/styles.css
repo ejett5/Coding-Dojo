@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: darkcyan;
+}
+h3{
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.button1{
+    background-color: purple ;
+    padding: 3em;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.button2{
+    background-color: blue;
+    padding: 1em;    
+}
+
+
+.button3{
+    background-color: firebrick;
+    padding: 1em;    
+}
