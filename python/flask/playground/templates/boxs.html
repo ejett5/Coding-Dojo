@@ -13,7 +13,7 @@
         }
         
         .mini{
-            background-color:pink;
+            background-color: {{ color }};
         }
     </style>
 </head>
@@ -24,12 +24,13 @@
     
 {# Here begins the playground box assignment to display boxes #}
 
-<div class="boxes">
-    <div>   {% for x in range(0, x): %} {{ color }}</div>   
+
+    {% for x in range(0, x): %}
+    <div class="mini"> </div>   
     
 {% endfor %}
 
-</div>
+
 
 
 
