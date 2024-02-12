@@ -11,9 +11,9 @@ def index():
 def home():
     return render_template('index.html')
 
-@app.route('/process/', methods = ['POST'])
+@app.route('/process/', methods=['POST'])
 def submit():
-    return redirect('/results.html')
+    return redirect('/result/')
 
 @app.route('/result/')
 def result():
