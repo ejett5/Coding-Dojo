@@ -10,15 +10,16 @@
 
 <body>
 
-    <div class="main">
-        <h3> Counter </h3>
-        <p></p>
-
-        <div class="button1">
-            <button class="button2">Add</button>
-            <button class=" button3" value="/destroy_session"> Reset </button>
+    <form action="/destroy_session" value = "/destroy_session">
+        <div class="main">
+            <h3> Counter </h3>
+            <p>{{session['count']}}</p>
+            <div class="button1">
+                <button class="button2">Add</button>
+                <button class=" button3" value="/destroy_session"> Reset </button>
+            </div>
         </div>
-    </div>
+    </form>
 
 
 </body>

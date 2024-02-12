@@ -5,7 +5,9 @@ app.secret_key = "underwear"
 
 @app.route('/')
 def index():
-    # session[''] = session ['']
+    if "count" not in session: #making a way to count and see if that method is not in the session
+        session['count'] = 0  #initialise session to the count
+    session['count'] += 1
     return render_template('index.html')
 
 # destroy the users session cookies info reseting the browser counter
