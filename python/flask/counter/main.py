@@ -14,8 +14,18 @@ def index():
 @app.route('/destroy_session')
 def destroy():
     session.clear()
-    session.pop('underwear')
-    redirect ('/')
+    # session.pop("underwear")
+    return redirect ('/')
+
+
+#add to the session counter
+@app.route('/increment')
+def increment():
+    if "count" not in session: #making a way to count and see if that method is not in the session
+        session['count'] = 0  #initialise session to the count
+    session['count'] += 2
+    return render_template ('/')
+    
 
 
 

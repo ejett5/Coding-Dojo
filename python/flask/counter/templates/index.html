@@ -10,13 +10,23 @@
 
 <body>
 
+    <h3> Counter </h3>
+    <p>{{session['count']}}</p>
+
+    <!-- making the add buttong to increase by 2 -->
+<form action="/increment" value = "/increment">
+    <div class="main">
+        <button class="button2"> Add</button>
+    </div>
+</form>
+
+    <!-- reset button that clears the session counter -->
     <form action="/destroy_session" value = "/destroy_session">
         <div class="main">
-            <h3> Counter </h3>
-            <p>{{session['count']}}</p>
+            
             <div class="button1">
-                <button class="button2">Add</button>
-                <button class=" button3" value="/destroy_session"> Reset </button>
+                
+                <button class=" button3" value="/destroy_session">  Reset </button>
             </div>
         </div>
     </form>
