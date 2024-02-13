@@ -1,7 +1,8 @@
-from flask import Flask, render_template, redirect, session
+from flask import Flask, render_template, redirect, session, request
 
 
 app = Flask(__name__)
+app.secret_key = 'underwear'
 
 @app.route('/')
 def index():
@@ -13,6 +14,10 @@ def home():
 
 @app.route('/process/', methods=['POST'])
 def submit():
+    session['Name'] = request.form['Name']
+    session['Location'] = request.form['Location']
+    session['Favorite_Language'] =  request.form['Favorite_Language']
+    session['Comments'] = request.form['Comments']
     return redirect('/result/')
 
 @app.route('/result/')
