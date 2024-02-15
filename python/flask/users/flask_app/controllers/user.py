@@ -7,3 +7,9 @@ from user import user
 @app.route('/')
 def index():
     return render_template('index.html')
+
+# retrieving users and displaying the information
+@app.route('/view_users/')
+def users_view_all():
+    return render_template('read.html')
+
