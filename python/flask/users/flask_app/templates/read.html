@@ -9,7 +9,15 @@
     <h2>Users:</h2>
     <sub>please find a list of users below, or search for a particular subject</sub>
 
-    <form action=""></form>
+    <form action="/view_users/">
+        <table>
+            <tr>  {{ id.name }}  </tr>
+            <tr>  {{ first_name  }} </tr>
+            <tr>  {{last_name}}  </tr>
+            <tr>  {{email}}  </tr>
+        </table>
+
+    </form>
     
 </body>
 </html>

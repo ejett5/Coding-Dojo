@@ -11,5 +11,6 @@ def index():
 # retrieving users and displaying the information
 @app.route('/view_users/')
 def users_view_all():
+    users_view_all.save(request.form)
     return render_template('read.html')
 

@@ -1,6 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 
 class User():
+    DB = "Local instance MYSQL83"
     def __init__(self, data):
         # accessing the data that is housed in the database
         self.id = data['id']
