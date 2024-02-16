@@ -9,15 +9,15 @@
     <h2>Users:</h2>
     <sub>please find a list of users below, or search for a particular subject</sub>
 
-    <form action="/view_users/">
+    {% for user in all_users %}
         <table>
             <tr>  {{ user.name }}  </tr>
             <tr>  {{ user.first_name  }} </tr>
             <tr>  {{ user.last_name }}  </tr>
             <tr>  {{ user.email }}  </tr>
         </table>
-
-    </form>
+    {% endfor %}
+    
     
 </body>
 </html>
