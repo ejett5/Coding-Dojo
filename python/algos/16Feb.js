@@ -17,9 +17,12 @@ const expected1 = "hello world";
  */
 function trim(str) {
     // 💭 Note: Empty spaces can be resolved as 'falsey'.
+    // if empty space after end then remove
+    // console.log(str1.trim())
+
     // Remember strings are immutable! 
 }
-
+console.log(str1.trim())
 /*****************************************************************************/
 
 /* 
@@ -59,7 +62,15 @@ const expected5 = true;
  */
 function isAnagram(s1, s2) {
     // We'll want to account for letter casing.
+    if (strA == strB){
+        console.log(true)
+    }else{
+        console.log(false)
+    }
     // Also tracking letters/counts of letters sounds familiar. Maybe we did an algo related to this recently? 🤔
 }
-
+console.log()
+console.log()
+console.log()
+console.log()
 /*****************************************************************************/
