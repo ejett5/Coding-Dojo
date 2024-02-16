@@ -13,7 +13,7 @@ def index():
 @app.route('/submit_profile/')
 def create_user(cls,data):
     query = """INSERT INTO user(first_name,last_name, email)
-    VALUES( $(first_name)s, %(last_name)s, $(email)s);
+    VALUES( %(first_name)s, %(last_name)s, %(email)s);
 """
     return redirect('read.html')
 
