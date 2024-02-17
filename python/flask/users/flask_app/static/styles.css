@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    text-align: center;
+}
+
+.test{
+    background-color: blueviolet;
+}
+
+.party{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color:  cadetblue;
+}
+
+.form{
+    display: flex;
+    padding: 2em;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    border: 2px solid black;
+}

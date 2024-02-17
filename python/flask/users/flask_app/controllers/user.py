@@ -1,7 +1,7 @@
 from flask_app import app 
 from flask import render_template,redirect, request, session, flash
 from flask_app.models.user_lookup import User 
-from flask_app.config.mysqlconnection import connectToMySQL
+
 
 
 # landing page for users website
@@ -22,7 +22,7 @@ def create_user():
         'email':request.form['email']
     }
     User.create_user(data)
-    return redirect('/')
+    return redirect('/read.html/')
 
 
 # retrieving users and displaying the information
