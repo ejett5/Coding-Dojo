@@ -15,6 +15,6 @@ class Ninjas():
         query = "SELECT * FROM ninja;"
         results = connectToMySQL(cls.DB).query_db(query)
         Ninjas = []
-        for ninja in results:
+        for Ninjas in results:
             Ninjas.append ( cls(Ninjas))
         return Ninjas
