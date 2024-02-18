@@ -12,18 +12,20 @@ class Dojo():
     #making method to create new dojo
     @classmethod
     def create_user(cls,data):
-        query = """INSERT INTO users (first_name,last_name, email)
-        VALUES( %(first_name)s, %(last_name)s, %(email)s);
+        query = """INSERT INTO dojo (name)
+        VALUES( %(name)s);
         """
-        result = connectToMySQL('users_schema').query_db(query,data)
+        result = connectToMySQL('dojos_ninja_schema').query_db(query,data)
         return result
     
     # view all dojos information
     @classmethod
-    def view_user(cls):
-        query = "SELECT * FROM users;"
+    def view_dojo(cls):
+        query = "SELECT * FROM dojo;"
         results = connectToMySQL(cls.DB).query_db(query)
-        users = []
-        for user in results:
-            users.append( cls(user))
-        return users
+        Dojo = []
+        for dojo in results:
+            Dojo.append( cls(Dojo))
+        return Dojo
+    
+
