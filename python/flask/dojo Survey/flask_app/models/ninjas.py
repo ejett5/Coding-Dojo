@@ -1,13 +1,13 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 
 class Ninjas():
-    DB = "dojos_and_ninjas_schema"
+    DB = "dojo_survey_schema"
     @classmethod
     def create_ninja(cls,data):
         query = """INSERT INTO dojo (name)
         VALUES( %(first_name)s, %(last_name)s, %(age)s );
         """
-        result = connectToMySQL('dojos_ninja_schema').query_db(query,data)
+        result = connectToMySQL('dojo_survey_schema').query_db(query,data)
         return result
     
     # view all ninjas information
