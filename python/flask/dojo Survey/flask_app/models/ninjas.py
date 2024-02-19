@@ -1,7 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 
 class Ninjas():
-    DB = "dojo_ninja_schema"
+    DB = "dojos_and_ninjas_schema"
     @classmethod
     def create_ninja(cls,data):
         query = """INSERT INTO dojo (name)
