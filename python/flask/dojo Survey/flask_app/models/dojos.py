@@ -24,7 +24,7 @@ class Dojo():
         query = "SELECT * FROM dojo;"
         results = connectToMySQL(cls.DB).query_db(query)
         Dojo = []
-        for dojo in results:
+        for Dojo in results:
             Dojo.append( cls(Dojo))
         return Dojo
     
