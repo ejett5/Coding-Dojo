@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+}
+
+.form{
+    display: flex;
+    background-color: antiquewhite;
+    border: 2px solid black;
+
+}
