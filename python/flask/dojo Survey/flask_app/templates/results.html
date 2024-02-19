@@ -18,11 +18,8 @@
             <th>Comments</th>
         </tr>
         <tr>
-        {% for ninja in ninja %}
-            <td> {{ user.first_name }} </td>
-            <td> {{ user.last_name }} </td>
-            <td> {{ user.age }} </td>
-            <td> {{ session['Name'] }}    </td>
+        {% for ninja in ninjas %}    
+            <td> {{ session['name'] }}    </td>
             <td> {{ session['Location'] }} </td>
             <td> {{ session['Favorite_Language'] }} </td>
             <td> {{ session['Comments'] }} </td>

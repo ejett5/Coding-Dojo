@@ -1,7 +1,8 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask import flash
 
 class Dojo():
-    DB = "dojos_and_ninja_schema"
+    DB = "dojo_survey_schema"
     def __dojo__(self, data):
         self.id = data['id']
         self.name = data['name']
@@ -12,10 +13,10 @@ class Dojo():
     #making method to create new dojo
     @classmethod
     def create_user(cls,data):
-        query = """INSERT INTO dojo (name)
-        VALUES( %(name)s);
+        query = """INSERT INTO dojos (name)
+        VALUES( %(name)s, %(location)s, %(language)s, %(comment)s);
         """
-        result = connectToMySQL('dojos_ninja_schema').query_db(query,data)
+        result = connectToMySQL('dojo_survey_schema').query_db(query,data)
         return result
     
     # view all dojos information
@@ -28,4 +29,20 @@ class Dojo():
             Dojo.append( cls(Dojo))
         return Dojo
     
+    @classmethod
+    def validate_dojo(Dojo):
+        is_valid = True
+        if len(Dojo)['name'] < 5:
+            flash("Name mjust be at least 5 characters.")
+            is_valid = False
+        if len(Dojo)['location'] < 5:
+            flash('location must be at least 5 character.')
+            is_valid = False
+        if len(Dojo['language']) < 5:
+            flash("must be at least 5 characters.")
+            is_valid = False
+        if len(Dojo['comment']) < 5:
+            flash("must be at least 5 characters")
+            is_valid = False
+        return is_valid
 

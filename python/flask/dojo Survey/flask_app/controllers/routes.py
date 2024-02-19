@@ -16,16 +16,16 @@ def home():
 @app.route('/process/', methods=['POST'])
 def submit():
     # session cookies for holding before sending to DB
-    session['Name'] = request.form['Name']
+    session['name'] = request.form['name']
     session['Location'] = request.form['Location']
     session['Favorite_Language'] =  request.form['Favorite_Language']
     session['Comments'] = request.form['Comments']
 
     # info for sending to DB and storing
     data = {
-        'first_name':request.form['first_name'],
-        'last_name':request.form['last_name'],
-        'age':request.form['age']
+        'name':request.form['name'],
+        'Location':request.form['Location'],
+        'Favorite_Language':request.form['Favorite_Language']
     }
     Ninjas.create_ninja(data)
     return redirect('/result/')
