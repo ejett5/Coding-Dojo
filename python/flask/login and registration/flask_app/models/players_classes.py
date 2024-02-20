@@ -20,6 +20,7 @@ class Player():
     def view_player(cls):
         query = "SELECT * FROM players;"
         results = connectToMySQL(cls.db).query_db(query)
+        players = []
         for player in results:
-            player.append( cls(player))
+            players.append( cls(player))
         return player
