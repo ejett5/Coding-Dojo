@@ -1,6 +1,12 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+import re
+
+r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$'
+
+
 
 class Player():
+    DB = 'login_and_registration'
     def __init__(self, data) -> None:
         self.id = data['id']
         self.first_name = data['first_name']
@@ -23,4 +29,4 @@ class Player():
         players = []
         for player in results:
             players.append( cls(player))
-        return player
+        return players

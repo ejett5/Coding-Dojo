@@ -1,5 +1,5 @@
-from flask import app 
-from flask_app.controllers import player 
+from flask_app import app 
+from flask_app.controllers import players_routes
 
 
 
