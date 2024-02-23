@@ -18,7 +18,7 @@ def view_player():
     # insert validation check that user is logged in and session still valid
     if 'email' not in session:
         flash('Please sign in')
-        return redirect('/')
+        return redirect('/dashboard/')
     
 
     one_player = Player.GetUserById({'id': session['player_id'] })
@@ -26,7 +26,9 @@ def view_player():
     one_player = Player.view_player()
     return render_template('dashboard.html', one_player=one_player)
 
-@app.route('/register/', methods = ['POST'])
+
+# player registration and redirect to dashboard
+@app.route('/register/', methods = ['POST']) #TODO figure out why method is not alloweed
 def CreatePlayer():
     data = {
         'first_name': request.form['first_name'],
@@ -35,7 +37,15 @@ def CreatePlayer():
         'password' : request.form['password']
     }
     Player.create_player(data)
-    return redirect('/home/')
+    return redirect('/dashboard/') 
+
+
+# route to view player information
+@app.route('/dashboard')  #TODO find out where view functions that overwrite this are
+def player_dash(cls, data):
+
+    return render_template('dashboard.html')
+
 
 
 
