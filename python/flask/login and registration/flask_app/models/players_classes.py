@@ -30,3 +30,12 @@ class Player():
         for player in results:
             players.append( cls(player))
         return players
+    
+
+    # viewing user by ID
+    @classmethod
+    def GetUserById(cls, data):
+        query = """
+        SELECT * FROM players
+        WHERE id = %(id)s;
+        """

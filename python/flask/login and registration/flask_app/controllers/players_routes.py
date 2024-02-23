@@ -16,9 +16,20 @@ def index():
 @app.route('/home/')
 def view_player():
     # insert validation check that user is logged in and session still valid
+    if 'email' not in session:
+        flash('Please sign in')
+        return redirect('/')
     
+
+    one_player = Player.GetUserById({'id': session['player_id'] })
+
     one_player = Player.view_player()
-    return render_template('dashboard.html')
+    return render_template('dashboard.html', one_player=one_player)
+
+@app.route('/register/')
+def CreatePlayer():
+    return render_template('registration.html')
+
 
 
 
