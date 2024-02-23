@@ -23,7 +23,7 @@ def view_player():
 
     one_player = Player.GetUserById({'id': session['player_id'] })
 
-    one_player = Player.view_player()
+    
     return render_template('dashboard.html', one_player=one_player)
 
 
@@ -43,7 +43,8 @@ def CreatePlayer():
 # route to view player information
 @app.route('/dashboard')  #TODO find out where view functions that overwrite this are
 def player_dash(cls, data):
-
+    one_player = Player.view_player()
+    
     return render_template('dashboard.html')
 
 
