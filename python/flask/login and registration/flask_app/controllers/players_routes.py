@@ -26,9 +26,18 @@ def view_player():
     one_player = Player.view_player()
     return render_template('dashboard.html', one_player=one_player)
 
-@app.route('/register/')
+@app.route('/register/', methods = ['POST'])
 def CreatePlayer():
-    return render_template('registration.html')
+    data = {
+        'first_name': request.form['first_name'],
+        'last_name': request.form['last_name'],
+        'email' : request.form['email'],
+        'password' : request.form['password']
+    }
+    Player.create_player(data)
+    return redirect('/home/')
+
+
 
 
 

@@ -7,7 +7,7 @@ r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$'
 
 class Player():
     DB = 'login_and_registration'
-    def __init__(self, data) -> None:
+    def __init__(self, data):
         self.id = data['id']
         self.first_name = data['first_name']
         self.last_name = data['last_name']
