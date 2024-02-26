@@ -13,12 +13,13 @@ def index():
     return render_template('index.html')
 
 # dashboard page for user when they login
-@app.route('/home/')
+@app.route('/home/') #TODO why is method not alloweed when there is no method? GET is default and the one needed to view info
 def view_player():
     # insert validation check that user is logged in and session still valid
     if 'email' not in session:
         flash('Please sign in')
-        return redirect('/dashboard/')
+        return redirect('/')
+    
     
 
     one_player = Player.GetUserById({'id': session['player_id'] })
@@ -28,7 +29,7 @@ def view_player():
 
 
 # player registration and redirect to dashboard
-@app.route('/register/', methods = ['POST']) #TODO figure out why not saving to DB
+@app.route('/register/', methods = ['POST']) #TODO figure out why not reading from DB
 def CreatePlayer():
     data = {
         'first_name': request.form['first_name'],
@@ -39,6 +40,11 @@ def CreatePlayer():
     Player.create_player(data)
     return redirect('/dashboard/') 
 
+
+# login route
+@app.route('/login/', methods = ['POST'])
+def login():
+    
 
 # route to view player information
 @app.route('/dashboard/')  

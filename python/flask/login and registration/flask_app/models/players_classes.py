@@ -41,3 +41,16 @@ class Player():
         SELECT * FROM players
         WHERE id = %(id)s;
         """
+        results = connectToMySQL(cls.db).query_db(query)
+
+    # getting by email
+    @classmethod
+    def GetUserByEmail(cls, data):
+        query = """
+        SELECT * FROM players
+        WHERE email = %(email)s;
+        """
+        results = connectToMySQL(cls.db).query_db(query)
+        if len(results) < 1:
+            return False
+        return cls(results[0])
