@@ -1,7 +1,8 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask import flash
 import re
 
-r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$'
+EMAIL_REGEX = re.compile( r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 
 
@@ -15,6 +16,47 @@ class Player():
         self.password = data['password']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+
+    @staticmethod
+    def validate_user(new_user):
+        is_valid = True
+        if len(new_user['first_name']) < 1:
+            flash('First Name is Required!')
+            is_valid = False
+        if len(new_user['first_name']) <= 3:
+            flash('First Name Must be 3+ characters!')
+            is_valid = False
+
+        if len(new_user['last_name']) < 1:
+            flash('Last Name is Required!')
+            is_valid = False
+        if len(new_user['last_name']) <= 3:
+            flash('Last Name Must be 3+ characters!')
+            is_valid = False
+
+        # Valid Email Format
+        if not EMAIL_REGEX.match(new_user['email']):
+            flash('Please enter a valid email!')
+            is_valid = False
+        else:
+            # Valid if this email is already in the DB
+            query = "SELECT * FROM users WHERE email = %(email)s;"
+            results = connectToMySQL(Player.DB).query_db(query, new_user)
+            if len(results) >= 1:
+                flash("Email taken, try a different Email!")
+                is_valid = False
+
+        if new_user['password'] != new_user['confirm_password']:
+            flash('Passwords must match!')
+            is_valid = False
+        if len(new_user['password']) < 1:
+            flash('Password is required!')
+            is_valid = False
+        if len(new_user['password']) < 5:
+            flash('Password Must be 5+ characters!')
+            is_valid = False
+
+        return is_valid
 
     @classmethod
     def create_player(cls, data):
@@ -41,16 +83,16 @@ class Player():
         SELECT * FROM players
         WHERE id = %(id)s;
         """
-        results = connectToMySQL(cls.db).query_db(query)
+        results = connectToMySQL(cls.db).query_db(query, data)
 
     # getting by email
     @classmethod
-    def GetUserByEmail(cls, data):
+    def GetPlayerByEmail(cls, data):
         query = """
         SELECT * FROM players
         WHERE email = %(email)s;
         """
-        results = connectToMySQL(cls.db).query_db(query)
+        results = connectToMySQL(cls.db).query_db(query, data)
         if len(results) < 1:
             return False
         return cls(results[0])
