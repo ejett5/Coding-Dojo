@@ -44,34 +44,15 @@ def CreatePlayer():
 # login route
 @app.route('/login/', methods = ['POST'])
 def login():
-    
+
+    return redirect ('/dashboard/')
+
 
 # route to view player information
-@app.route('/dashboard/')  
+@app.route('/dashboard/')   
 def player_dash():
     
 
     one_player = Player.view_player()
 
     return render_template('dashboard.html', one_player=one_player)
-
-
-
-
-
-
-
-
-
-
-
-
-
-#! context processor function that retrieves the flash messages
-#! Context processor makes flash messages available in all templates
-# @app.context_processor
-# def inject_flash_messages():
-#     messages = get_flashed_messages()
-#     return dict(messages=messages)
-#? I don't need to explicitly pass flash messages to each template rendering call in your routes.
-#? The messages variable will be available globally in all templates.
