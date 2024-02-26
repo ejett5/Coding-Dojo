@@ -28,7 +28,7 @@ def view_player():
 
 
 # player registration and redirect to dashboard
-@app.route('/register/', methods = ['POST']) #TODO figure out why method is not alloweed
+@app.route('/register/', methods = ['POST']) #TODO figure out why not saving to DB
 def CreatePlayer():
     data = {
         'first_name': request.form['first_name'],
@@ -41,11 +41,13 @@ def CreatePlayer():
 
 
 # route to view player information
-@app.route('/dashboard')  #TODO find out where view functions that overwrite this are
-def player_dash(cls, data):
-    one_player = Player.view_player()
+@app.route('/dashboard/')  
+def player_dash():
     
-    return render_template('dashboard.html')
+
+    one_player = Player.view_player()
+
+    return render_template('dashboard.html', one_player=one_player)
 
 
 

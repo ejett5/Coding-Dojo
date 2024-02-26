@@ -6,7 +6,7 @@ r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$'
 
 
 class Player():
-    DB = 'login_and_registration'
+    db = 'login_and_registration'
     def __init__(self, data):
         self.id = data['id']
         self.first_name = data['first_name']
@@ -21,6 +21,8 @@ class Player():
         query = """ INSERT INTO players (first_name, last_name, email, password)
         VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(password)s);
         """
+        return connectToMySQL(cls.db).query_db(query,data)
+        
 
     @classmethod
     def view_player(cls):
