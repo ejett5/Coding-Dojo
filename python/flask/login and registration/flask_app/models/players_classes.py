@@ -38,13 +38,19 @@ class Player():
         if not EMAIL_REGEX.match(new_user['email']):
             flash('Please enter a valid email!')
             is_valid = False
-        else:
-            # Valid if this email is already in the DB
-            query = "SELECT * FROM users WHERE email = %(email)s;"
-            results = connectToMySQL(Player.DB).query_db(query, new_user)
-            if len(results) >= 1:
-                flash("Email taken, try a different Email!")
-                is_valid = False
+
+        if Player.GetPlayerByEmail(new_user):
+            flash("Email taken, try a different Email!")
+            is_valid = False
+
+
+        # else:
+        #     # Valid if this email is already in the DB
+        #     query = "SELECT * FROM users WHERE email = %(email)s;"
+        #     results = connectToMySQL(Player.db).query_db(query, new_user)
+        #     if len(results) >= 1:
+        #         flash("Email taken, try a different Email!")
+        #         is_valid = False
 
         if new_user['password'] != new_user['confirm_password']:
             flash('Passwords must match!')

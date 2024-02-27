@@ -22,7 +22,15 @@
         <button type="submit">Login</button>
     </form>
 
-
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            {% for message in messages %}            <!-- loop through the messages -->
+                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    
     <!-- registration for new player -->
 
     <h1>Login and Registration</h1>
@@ -39,6 +47,9 @@
 
         <label for="password"> Password : </label>
         <input type="password" name="password" id="password">
+        
+        <label for="confirm_password"> Confirm Password : </label>
+        <input type="password" name="confirm_password" id="confirm_password">
 
         <button type="submit" id="submit_player">submit player</button>
 

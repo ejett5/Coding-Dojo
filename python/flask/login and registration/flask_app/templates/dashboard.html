@@ -6,16 +6,16 @@
     <title>Document</title>
 
     <!-- logout button and session clearing -->
-    <button name="logout">Logout</button>
+    <a href="/logout"><button name="logout">Logout</button></a>
 
 </head>
 <body>
     <h1>Greetings</h1>
 
-    {% for one_player in Players %}
+    
     <p>Welcome {{ one_player.first_name }}</p>
 
-    {% endfor %}
+    
 
     
 </body>

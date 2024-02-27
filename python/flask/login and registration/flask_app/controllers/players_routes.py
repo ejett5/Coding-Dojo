@@ -32,6 +32,7 @@ def view_player():
 @app.route('/register/', methods = ['POST']) #TODO figure out why not reading from DB
 def CreatePlayer():
     if not Player.validate_user(request.form):
+        print('issue')
         return redirect('/')
     pw_hash = bcrypt.generate_password_hash(request.form['password'])
     data = {
@@ -69,8 +70,8 @@ def player_dash():
     return render_template('dashboard.html', one_player=one_player)
 
 # route that clears the session for the logout button
-@app.route('/dashboard/')
+@app.route('/logout/')
 def logout():
     session.clear() #TODO figure out session clearing syntax
-    return redirect('/home/')
+    return redirect('/')
 
