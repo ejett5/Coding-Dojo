@@ -6,12 +6,17 @@
     <title>Document</title>
 
     <!-- logout button and session clearing -->
-    <button name="clear_session">Logout</button>
+    <button name="logout">Logout</button>
 
 </head>
 <body>
     <h1>Greetings</h1>
 
+    {% for one_player in Players %}
     <p>Welcome {{ one_player.first_name }}</p>
+
+    {% endfor %}
+
+    
 </body>
 </html>

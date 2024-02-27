@@ -71,6 +71,6 @@ def player_dash():
 # route that clears the session for the logout button
 @app.route('/dashboard/')
 def logout():
-    clear_session = 'goodbye'
+    session.clear() #TODO figure out session clearing syntax
     return redirect('/home/')
 
