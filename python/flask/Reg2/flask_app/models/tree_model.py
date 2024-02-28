@@ -11,7 +11,7 @@ EMAIL_REGEX = re.compile('^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA]+$')
 
     #CREATE TREES
 class Tree:
-        db = 'treeDB' #WHAT DATABASE ARE YOU USING FOR THIS PROJECT?
+        db = 'login_and_registration' #WHAT DATABASE ARE YOU USING FOR THIS PROJECT?
         def __init__(self, data):
             self.id =           data["id"]
             self.host_id =      data["user_id"]
@@ -51,6 +51,8 @@ class Tree:
                 SELECT * FROM trees JOIN users ON users.id = trees.user_id; '''
             results = connectToMySQL(cls.db).query_db(query)
             treess = []
+            if not results:
+                return treess
             for result in results:
                 this_trees = cls(result)
                 this_trees.host = user_model.User.instantiate_user(result)
@@ -154,8 +156,8 @@ class Tree:
                 flash('specie must be 2 or more characters')
                 is_valid = False
 
-            if len(data['location']) < 8:
-                flash('Description must be 8 or more characters')
+            if len(data['location']) < 5:
+                flash('Description must be 5 or more characters')
                 is_valid = False
 
             date_regex = re.compile(r'^\d{4}-\d{2}-\d{2}$')

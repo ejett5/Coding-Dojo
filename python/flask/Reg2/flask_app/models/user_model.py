@@ -105,9 +105,9 @@ class User:
             is_valid = False
             flash('Your last name must contain at least two characters')
 
-        if len(data['password']) < 8 :
+        if len(data['password']) < 5 :
             is_valid = False
-            flash('Your password must contain at least 8 characters')
+            flash('Your password must contain at least 5 characters')
 
         if data['password'] != data['confirm_password']:
             is_valid = False
