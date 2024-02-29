@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_page.css') }}">
+    <title>Edit Tree</title>
+</head>
+
+<body>
+    <header>
+        <nav class="topNav">
+            <a href="/users/logout">Logout</a>
+            <a href="/users/home" class="dashboard-link">Home Page</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="validation-messages">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div id="popup">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <button onclick="popup.remove()">Okay</button>
+            </div>
+            {% endif %}
+            {% endwith %}
+        </section>
+
+        <section class="edit-form">
+            <form action="/tree/edit/{{ tree.id }}" method="post">
+                <h1>Edit Tree info: {{ tree.specie }}</h1>
+                <p>Mapped By: {{ tree.host.first_name }}</p>
+                <input type="hidden" name="user_id" value="{{ session.user_id }}">
+                <div class="form-group">
+                    <label for="specie">Species:</label>
+                    <input type="text" id="specie" name="specie">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+
+                <div class="form-group">
+                    <label for="date_found">Date Found:</label>
+                    <input type="date" id="date_found" name="date_found">
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip Code:</label>
+                    <input type="number" id="zip" name="zip">
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Notes:</label>
+                    <textarea id="note" name="note" rows="4" cols="50"></textarea>
+                </div>
+
+                <div class="actions">
+                    <a href="/users/home"><button type="button" class="cancel-button">Cancel</button></a>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="/users/home">Back to Home Page</a>
+        </div>
+    </footer>
+</body>
+
+</html>

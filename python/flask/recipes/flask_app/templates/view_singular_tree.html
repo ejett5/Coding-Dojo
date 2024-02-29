@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view_single.css') }}">
+    <title>Singular Tree Details</title>
+</head>
+
+<body>
+    <header class="topNav">
+        <nav>
+            <a href="/users/logout">Logout</a> |
+            <a href="/users/home">Home Page</a>
+        </nav>
+    </header>
+
+    <main class="treeDetails">
+        <h1>Tree Mapper</h1>
+        <p>Find, share and learn about real trees!</p>
+
+        <div class="treeInfo">
+            <h2>Specie: {{ tree.specie }} | Added By: {{ tree.host.first_name }} {{ tree.host.last_name }}</h2>
+        </div>
+        <div class="treeAttributes">
+            <p><strong>Where:</strong> {{ tree.location }}</p>
+            <p><strong>When:</strong> {{ tree.date_found }}</p>
+            <p><strong>Notes:</strong> {{ tree.note }}</p>
+        </div>
+    </main>
+
+    <h4>Viewed By:</h4>
+    <p>Feature coming soon</p>
+    <p>Stretch Goal: Users can visit
+        trees. List any visitors to this tree, and a link to visit the tree. The
+        link should not appear if the user
+        already visited the tree.</p>
+
+    <footer>
+        <a href="/users/home">Back to Home Page</a>
+    </footer>
+</body>
+
+</html>

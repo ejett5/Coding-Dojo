@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/home_style.css') }}">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <header class="topNav">
+        <h1>Tree Mapper</h1>
+        <p>Find, share and learn about real trees!</p>
+        <h2>Welcome {{ session.user_name }}!</h2>
+        <nav>
+            <a href="/tree/create">Post a new tree on the map</a>
+            <a href="/users/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="leftSideBox">
+            <h2>Mapped Trees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Species</th>
+                        <th>View</th>
+                        <th>Mapped By</th>
+                        <th>Zip Code</th>
+                        <!-- <th>Actions</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tree in trees %}
+                    <tr>
+                        <td> {{ tree.specie }}
+                            {% if session.user_id == tree.host_id %}
+                            <a href="/tree/edit/{{ tree.id }}">Edit</a> |
+                            <a href="{{ url_for('delete_tree', tree_id=tree.id) }}">Delete</a>
+                            {% endif %}
+                        </td>
+                        <td><a href="/tree/view/{{ tree.id }}"> More </a></td>
+                        <td>{{ tree.host.first_name }} {{ tree.host.last_name }}</td>
+                        <td>{{ tree.zip }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</body>
+
+</html>
